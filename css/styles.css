@@ -1,0 +1,45 @@
+:root {
+    --bg-color: #222f3e;
+    --base-color: #fff;
+}
+
+@font-face {
+    font-family: 'Ringbearer';
+    src: url('../fonts/RINGM___.TTF') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Ringbearer', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--base-color);
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 1rem;
+    position: relative;
+}
+
+.container::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    mask-image: url('../images/ink.gif');
+    mask-size: cover;
+    mask-position: center;
+    content: '';
+}
+
+.content .title {
+    font-size: 6em;
+    margin-bottom: 1rem;
+}
